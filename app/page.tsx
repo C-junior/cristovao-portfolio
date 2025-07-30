@@ -257,7 +257,7 @@ export default function Portfolio() {
               <div className={`relative ${isVisible ? "animate-slide-left" : "opacity-0"}`}>
                 <div className="relative z-10 group">
                   <Image
-                    src="/me.png?height=500&width=600"
+                    src="/logo.png?height=500&width=600"
                     alt="Cristovão Junior - Web Designer"
                     width={600}
                     height={500}
