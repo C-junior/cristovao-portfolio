@@ -47,31 +47,31 @@ export default function Portfolio() {
   const services = [
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "Websites para Eventos",
+      title: "Websites Personalizados",
       description:
-        "Sites personalizados para casamentos, festas e eventos corporativos com design único e funcionalidades específicas.",
-      features: ["Design Responsivo", "Galeria de Fotos", "RSVP Online", "Informações do Evento"],
+        "Sites sob medida para sua marca — institucionais, portfólios ou produtos digitais com foco em usabilidade e performance.",
+      features: ["Design Responsivo", "Portfólios e Galerias", "Integrações Personalizadas", "SEO Básico"],
     },
     {
       icon: <Zap className="h-8 w-8" />,
       title: "Landing Pages",
-      description: "Páginas de alta conversão para promover seus eventos e capturar leads qualificados.",
+      description: "Páginas de alta conversão para captar leads, apresentar produtos ou promover campanhas.",
       features: ["Otimização SEO", "Formulários Integrados", "Analytics", "Carregamento Rápido"],
     },
     {
       icon: <Palette className="h-8 w-8" />,
-      title: "E-commerce para Eventos",
-      description: "Lojas online para venda de ingressos, produtos personalizados e serviços relacionados a eventos.",
+      title: "E-commerce",
+      description: "Lojas online escaláveis com pagamento seguro, gestão de produtos e experiência de compra otimizada.",
       features: ["Pagamento Seguro", "Gestão de Estoque", "Cupons de Desconto", "Relatórios de Vendas"],
     },
   ]
 
   const portfolio = [
     {
-      title: "Casamento de Naissa e Cristovão",
-      category: "Casamento",
+      title: "Site Pessoal - Naissa e Cristovão",
+      category: "Portfólio Pessoal",
       image: "/naissaecristovao.png?height=300&width=400",
-      description: "Website completo para casamento com galeria, RSVP e informações dos noivos.",
+      description: "Website responsivo com galeria e seções personalizadas para apresentação pessoal.",
       tech: ["React", "Next.js", "Tailwind"],
     },
     {
@@ -90,9 +90,9 @@ export default function Portfolio() {
     },
     {
       title: "Agrotins 2025",
-      category: "Evento",
+      category: "Hotsite Institucional",
       image: "/agrotins.png?height=300&width=400",
-      description: "Hotsite para evento de grande porte com site institucional, informações e galeria de fotos.",
+      description: "Hotsite institucional com seções informativas, galeria e chamadas para ação.",
       tech: ["Vue.js", "Nuxt", "Tailwind"],
     },
   ]
@@ -100,16 +100,16 @@ export default function Portfolio() {
   const testimonials = [
     {
       name: "Naissa",
-      role: "Noiva",
+      role: "Cliente",
       content:
-        "Cristovão criou o site perfeito para nosso casamento. Todos os convidados elogiaram o design e a facilidade de uso!",
+        "Cristovão criou o site perfeito para nosso projeto. Design limpo, carregamento rápido e ótima usabilidade.",
       rating: 5,
       avatar: "/placeholder.svg?height=60&width=60",
     },
     {
       name: "João Santos",
-      role: "Organizador de Eventos",
-      content: "Trabalho excepcional! O site aumentou nossas vendas de ingressos em 40%. Recomendo totalmente!",
+      role: "Cliente",
+      content: "Trabalho excepcional! O site melhorou significativamente nossos resultados online.",
       rating: 5,
       avatar: "/placeholder.svg?height=60&width=60",
     },
@@ -117,7 +117,7 @@ export default function Portfolio() {
       name: "Ana Costa",
       role: "Empresária",
       content:
-        "Profissional dedicado e criativo. Entregou exatamente o que precisávamos para nosso evento corporativo.",
+        "Profissional dedicado e criativo. Entregou exatamente o que precisávamos para nosso website institucional.",
       rating: 5,
       avatar: "/placeholder.svg?height=60&width=60",
     },
@@ -206,18 +206,17 @@ export default function Portfolio() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className={`space-y-6 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
                 <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20 hover:bg-blue-500/20 transition-all duration-300">
-                  Especialista em Websites para Eventos
+                  Websites Profissionais
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Transformo seus{" "}
+                  Transformo sua presença online em
                   <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                    eventos
-                  </span>{" "}
-                  em experiências digitais únicas
+                    resultados reais
+                  </span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Crio websites personalizados para casamentos, festas e eventos corporativos que encantam seus
-                  convidados e aumentam suas conversões.
+                  Desenvolvo websites personalizados para empresas e profissionais, com foco em usabilidade, marca e
+                  conversão.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
@@ -276,10 +275,10 @@ export default function Portfolio() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">Serviços</Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Soluções completas para seus eventos</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Soluções digitais completas para sua marca</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Ofereço serviços especializados em design web para eventos, focando em conversão e experiência do
-                usuário.
+                Ofereço soluções de design e desenvolvimento web que alinham estética e desempenho para gerar valor
+                real ao seu negócio.
               </p>
             </div>
 
@@ -323,7 +322,7 @@ export default function Portfolio() {
               <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">Portfólio</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">Projetos que fazem a diferença</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Conheça alguns dos websites que criei para eventos especiais e veja como posso ajudar você também.
+                Conheça alguns dos projetos que desenvolvi e veja como posso ajudar a elevar sua presença digital.
               </p>
             </div>
 
@@ -402,9 +401,9 @@ export default function Portfolio() {
                   Paixão por criar experiências digitais memoráveis
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Sou Cristovão Junior, web designer especializado em criar websites únicos para eventos. Com mais de 5
-                  anos de experiência, já ajudei centenas de clientes a transformarem seus eventos em experiências
-                  digitais inesquecíveis.
+                  Sou Cristovão Junior, web designer com mais de 5 anos de experiência em criar websites que combinam
+                  design e estratégia. Já ajudei empresas e profissionais a aumentarem sua autoridade e resultados
+                  online.
                 </p>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   Minha missão é combinar design moderno com funcionalidade prática, criando websites que não apenas
@@ -490,7 +489,7 @@ export default function Portfolio() {
               <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">Contato</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">Pronto para começar seu projeto?</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Entre em contato comigo e vamos criar juntos o website perfeito para seu evento.
+                Entre em contato comigo e vamos criar juntos o website perfeito para sua marca ou negócio.
               </p>
             </div>
 
@@ -540,7 +539,7 @@ export default function Portfolio() {
                       />
                     </div>
                     <Input
-                      placeholder="Tipo de evento"
+                      placeholder="Tipo de projeto (ex: site institucional, loja, landing page)"
                       className="border-blue-500/30 focus:border-blue-400 transition-all duration-300"
                     />
                     <Textarea

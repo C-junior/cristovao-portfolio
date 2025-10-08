@@ -7,10 +7,10 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Cristovão Junior - Web Designer Especialista em Eventos",
+  title: "Cristovão Junior - Web Designer Profissional",
   description:
-    "Crio websites personalizados para casamentos, festas e eventos corporativos. Design moderno, responsivo e focado em conversão.",
-  keywords: "web designer, eventos, casamentos, festas corporativas, websites, Brasil",
+    "Crio websites personalizados e estratégicos para empresas e profissionais. Design moderno, responsivo e focado em conversão.",
+  keywords: "web designer, websites, design responsivo, conversão, Brasil",
   authors: [{ name: "Cristovão Junior" }],
   viewport: "width=device-width, initial-scale=1",
     generator: 'v0.dev'
