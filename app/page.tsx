@@ -15,6 +15,8 @@ import {
   Zap,
   Globe,
   Palette,
+  Github,
+  MessageCircle,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -218,22 +220,28 @@ export default function Portfolio() {
                   Desenvolvo websites personalizados para empresas e profissionais, com foco em usabilidade, marca e
                   conversão.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-                  >
-                    Ver Meu Trabalho
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 bg-transparent"
-                  >
-                    Solicitar Orçamento
-                  </Button>
-                </div>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                      asChild
+                    >
+                      <Link href="#portfolio">
+                        Ver Meu Trabalho
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 bg-transparent"
+                      asChild
+                    >
+                      <Link href="https://wa.me/5563981089718" target="_blank">
+                        Solicitar Orçamento
+                      </Link>
+                    </Button>
+                  </div>
                 <div className="flex flex-wrap items-center gap-6 mt-8 text-sm text-muted-foreground">
                   {[
                     { icon: <Check className="h-4 w-4 text-blue-400" />, text: "Entrega em 7 dias" },
@@ -498,17 +506,20 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-semibold mb-6">Vamos conversar</h3>
                 <div className="space-y-6">
                   {[
-                    { icon: <Mail className="h-6 w-6 text-blue-400" />, title: "Email", info: "cristovao@exemplo.com" },
-                    { icon: <Phone className="h-6 w-6 text-blue-400" />, title: "WhatsApp", info: "(63) 9810-9718" },
+                    { icon: <Mail className="h-6 w-6 text-blue-400" />, title: "Email", info: "ti.juniorc@gmail.com", href: "mailto:ti.juniorc@gmail.com" },
+                    { icon: <Phone className="h-6 w-6 text-blue-400" />, title: "WhatsApp", info: "(63) 98108-9718", href: "https://wa.me/5563981089718" },
                     {
                       icon: <Instagram className="h-6 w-6 text-blue-400" />,
                       title: "Instagram",
-                      info: "@cristovaojr.design",
+                      info: "Em breve",
+                      href: "#",
                     },
                   ].map((contact, index) => (
-                    <div
+                    <Link
                       key={index}
-                      className="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-950/20 transition-all duration-300 hover:scale-105 cursor-pointer"
+                      href={contact.href}
+                      target={contact.href.startsWith("http") ? "_blank" : undefined}
+                      className="flex items-center gap-4 p-4 rounded-lg hover:bg-blue-950/20 transition-all duration-300 hover:scale-105 cursor-pointer block"
                     >
                       <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
                         {contact.icon}
@@ -519,7 +530,7 @@ export default function Portfolio() {
                           {contact.info}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -547,9 +558,11 @@ export default function Portfolio() {
                       rows={4}
                       className="border-blue-500/30 focus:border-blue-400 transition-all duration-300"
                     />
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                      Enviar Mensagem
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25" asChild>
+                      <Link href="https://wa.me/5563981089718?text=Olá,%20gostaria%20de%20um%20orçamento." target="_blank">
+                        Enviar Mensagem
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Link>
                     </Button>
                   </form>
                 </CardContent>
@@ -568,8 +581,9 @@ export default function Portfolio() {
               <div className="flex items-center space-x-6">
                 {[
                   { icon: <Instagram className="h-5 w-5" />, href: "#" },
-                  { icon: <Linkedin className="h-5 w-5" />, href: "#" },
-                  { icon: <Mail className="h-5 w-5" />, href: "#" },
+                  { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/juniorcristovao" },
+                  { icon: <Github className="h-5 w-5" />, href: "https://github.com/C-junior" },
+                  { icon: <Mail className="h-5 w-5" />, href: "mailto:ti.juniorc@gmail.com" },
                 ].map((social, index) => (
                   <Link
                     key={index}
@@ -586,6 +600,16 @@ export default function Portfolio() {
             </div>
           </div>
         </footer>
+        
+        {/* Floating WhatsApp Button */}
+        <Link
+          href="https://wa.me/5563981089718"
+          target="_blank"
+          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-110 animate-bounce-slow"
+          aria-label="Contato via WhatsApp"
+        >
+          <MessageCircle className="h-8 w-8" />
+        </Link>
       </div>
     </div>
   )
