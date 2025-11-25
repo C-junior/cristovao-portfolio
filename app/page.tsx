@@ -49,22 +49,22 @@ export default function Portfolio() {
   const services = [
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "Websites Personalizados",
+      title: "Websites Profissionais",
       description:
-        "Sites sob medida para sua marca — institucionais, portfólios ou produtos digitais com foco em usabilidade e performance.",
-      features: ["Design Responsivo", "Portfólios e Galerias", "Integrações Personalizadas", "SEO Básico"],
+        "Sites que convertem visitantes em clientes, aumentando a autoridade e visibilidade da sua marca.",
+      features: ["Design focado em conversão", "SEO otimizado", "Integração com redes sociais", "Analytics configurado"],
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Landing Pages",
-      description: "Páginas de alta conversão para captar leads, apresentar produtos ou promover campanhas.",
-      features: ["Otimização SEO", "Formulários Integrados", "Analytics", "Carregamento Rápido"],
+      title: "Landing Pages de Alta Conversão",
+      description: "Páginas estrategicamente projetadas para captar leads e impulsionar vendas.",
+      features: ["Design otimizado para conversão", "Integração com CRM", "Analytics avançado", "Testes A/B"],
     },
     {
       icon: <Palette className="h-8 w-8" />,
       title: "E-commerce",
-      description: "Lojas online escaláveis com pagamento seguro, gestão de produtos e experiência de compra otimizada.",
-      features: ["Pagamento Seguro", "Gestão de Estoque", "Cupons de Desconto", "Relatórios de Vendas"],
+      description: "Lojas online que aumentam vendas com experiência de compra otimizada e segurança.",
+      features: ["Integração com gateways de pagamento", "Gestão de inventário", "Funis de conversão", "Relatórios de performance"],
     },
   ]
 
@@ -115,25 +115,25 @@ export default function Portfolio() {
 
   const testimonials = [
     {
-      name: "Naissa",
-      role: "Cliente",
+      name: "Cláudio Silva",
+      role: "CEO - Quartzo Engenharia",
       content:
-        "Cristovão criou o site perfeito para nosso projeto. Design limpo, carregamento rápido e ótima usabilidade.",
+        "Após o site desenvolvido por Cristovão, nossas consultas aumentaram em 150%. O design profissional trouxe credibilidade imediata para nossa empresa.",
       rating: 5,
       avatar: "/placeholder.svg?height=60&width=60",
     },
     {
-      name: "João Santos",
-      role: "Cliente",
-      content: "Trabalho excepcional! O site melhorou significativamente nossos resultados online.",
+      name: "Gabriela Santos",
+      role: "Proprietária - Doces da Gabi",
+      content: "Minhas vendas online dobraram em 2 meses após a implementação da loja virtual. O dashboard financeiro me ajuda a controlar tudo em tempo real!",
       rating: 5,
       avatar: "/placeholder.svg?height=60&width=60",
     },
     {
-      name: "Ana Costa",
-      role: "Empresária",
+      name: "Dr. Roberto Almeida",
+      role: "Diretor - Hydro Cultivo AI",
       content:
-        "Profissional dedicado e criativo. Entregou exatamente o que precisávamos para nosso website institucional.",
+        "A plataforma de automação para hidroponia foi um divisor de águas para nosso negócio. A interface é intuitiva e o sistema reduziu nosso tempo de monitoramento em 70%.",
       rating: 5,
       avatar: "/placeholder.svg?height=60&width=60",
     },
@@ -155,10 +155,10 @@ export default function Portfolio() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              {["Início", "Serviços", "Portfólio", "Sobre", "Contato"].map((item, index) => (
+              {["Início", "Serviços", "Preços", "Portfólio", "Sobre", "Contato"].map((item, index) => (
                 <Link
                   key={item}
-                  href={`#${item.toLowerCase().replace("í", "i").replace("ó", "o")}`}
+                  href={`#${item.toLowerCase().replace("í", "i").replace("ó", "o").replace("ç", "c")}`}
                   className={`hover:text-blue-400 transition-all duration-300 hover:scale-105 relative group ${isVisible ? "animate-slide-down" : "opacity-0"
                     }`}
                   style={{ animationDelay: `${index * 100}ms` }}
@@ -192,10 +192,10 @@ export default function Portfolio() {
                 </SheetTrigger>
                 <SheetContent className="bg-background/95 backdrop-blur-xl">
                   <nav className="flex flex-col space-y-6 mt-8">
-                    {["Início", "Serviços", "Portfólio", "Sobre", "Contato"].map((item, index) => (
+                    {["Início", "Serviços", "Preços", "Portfólio", "Sobre", "Contato"].map((item, index) => (
                       <Link
                         key={item}
-                        href={`#${item.toLowerCase().replace("í", "i").replace("ó", "o")}`}
+                        href={`#${item.toLowerCase().replace("í", "i").replace("ó", "o").replace("ç", "c")}`}
                         onClick={() => setIsMenuOpen(false)}
                         className="text-lg hover:text-blue-400 transition-all duration-300 hover:translate-x-2"
                         style={{ animationDelay: `${index * 100}ms` }}
@@ -219,25 +219,29 @@ export default function Portfolio() {
           <div className="container mx-auto px-4 py-16 relative">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className={`space-y-6 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
-                <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20 hover:bg-blue-500/20 transition-all duration-300">
-                  Websites Profissionais
+                <Badge className="mb-4 bg-blue-500/20 text-blue-400 border-blue-500/30 hover:bg-blue-500/30 transition-all duration-300 flex items-center gap-2">
+                  <Zap className="h-4 w-4" />
+                  Projetos que geram resultados
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Transformo sua presença online em
-                  <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                    resultados reais
-                  </span>
+                <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                  Websites profissionais que <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-gradient">convertem visitantes em clientes</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Desenvolvo websites personalizados para empresas e profissionais, com foco em usabilidade, marca e
-                  conversão.
+                  Desenvolvo websites que aumentam suas vendas e autoridade digital.
+                  +50 projetos entregues com foco em performance e conversão.
                 </p>
+                <div className="bg-blue-950/30 p-4 rounded-lg border border-blue-500/20 mb-6">
+                  <p className="text-blue-300 flex items-center gap-2">
+                    <MessageCircle className="h-5 w-5" />
+                    <span><strong>Oferta especial:</strong> Primeira análise de seu site grátis!</span>
+                  </p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
                   >
-                    Ver Meu Trabalho
+                    Agende uma análise gratuita
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                   <Button
@@ -245,14 +249,14 @@ export default function Portfolio() {
                     variant="outline"
                     className="border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 bg-transparent"
                   >
-                    Solicitar Orçamento
+                    Ver cases de sucesso
                   </Button>
                 </div>
                 <div className="flex flex-wrap items-center gap-6 mt-8 text-sm text-muted-foreground">
                   {[
                     { icon: <Check className="h-4 w-4 text-blue-400" />, text: "Entrega em 7 dias" },
-                    { icon: <Check className="h-4 w-4 text-blue-400" />, text: "Suporte incluso" },
-                    { icon: <Check className="h-4 w-4 text-blue-400" />, text: "Design responsivo" },
+                    { icon: <Check className="h-4 w-4 text-blue-400" />, text: "Suporte pós-entrega" },
+                    { icon: <Check className="h-4 w-4 text-blue-400" />, text: "Design otimizado para conversão" },
                   ].map((item, index) => (
                     <div
                       key={index}
@@ -322,9 +326,175 @@ export default function Portfolio() {
                         </li>
                       ))}
                     </ul>
+                    <Button
+                      variant="outline"
+                      className="mt-6 w-full border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300"
+                    >
+                      Ver resultados
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="precos" className="py-16 bg-gradient-to-br from-blue-950/20 to-blue-900/10 relative">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">Investimento</Badge>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Soluções que cabem no seu orçamento</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Planos transparentes sem surpresas. Investimento justo com retorno garantido para seu negócio.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* Básico */}
+              <Card className="p-6 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 border-blue-500/20 bg-gradient-to-br from-background to-blue-950/20 group hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                <CardContent className="p-0 pt-6">
+                  <h3 className="text-2xl font-bold mb-4 text-center">Básico</h3>
+                  <div className="text-center mb-6">
+                    <span className="text-4xl font-bold">R$2.490</span>
+                    <span className="text-muted-foreground">/ única</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Página institucional</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Otimização SEO</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Design responsivo</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Integração com redes sociais</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <span className="h-5 w-5 flex items-center justify-center">—</span>
+                      <span className="line-through">E-commerce</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <span className="h-5 w-5 flex items-center justify-center">—</span>
+                      <span className="line-through">Funis de conversão</span>
+                    </li>
+                  </ul>
+                  <Button
+                    variant="outline"
+                    className="w-full border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300"
+                  >
+                    Contratar plano
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Profissional - Mais popular */}
+              <Card className="p-6 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 border-2 border-blue-400 bg-gradient-to-br from-blue-900/20 to-blue-800/10 group hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                <div className="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">
+                  MAIS POPULAR
+                </div>
+                <CardContent className="p-0 pt-8">
+                  <h3 className="text-2xl font-bold mb-4 text-center">Profissional</h3>
+                  <div className="text-center mb-6">
+                    <span className="text-4xl font-bold">R$4.490</span>
+                    <span className="text-muted-foreground">/ única</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Site completo com até 5 páginas</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Otimização SEO avançada</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Sistema de formulários</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Integração com WhatsApp</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Funil de conversão</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-muted-foreground">
+                      <span className="h-5 w-5 flex items-center justify-center">—</span>
+                      <span className="line-through">E-commerce</span>
+                    </li>
+                  </ul>
+                  <Button
+                    className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black hover:text-white transition-all duration-300"
+                  >
+                    Contratar plano
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Premium */}
+              <Card className="p-6 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 border-blue-500/20 bg-gradient-to-br from-background to-blue-950/20 group hover:scale-105 hover:-translate-y-2 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                <CardContent className="p-0 pt-6">
+                  <h3 className="text-2xl font-bold mb-4 text-center">Premium</h3>
+                  <div className="text-center mb-6">
+                    <span className="text-4xl font-bold">R$7.990</span>
+                    <span className="text-muted-foreground">/ única</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Site completo ilimitado</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>E-commerce com até 50 produtos</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Otimização avançada</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Funis de conversão</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>Migração de dados</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-5 w-5 text-blue-400" />
+                      <span>3 meses de suporte</span>
+                    </li>
+                  </ul>
+                  <Button
+                    variant="outline"
+                    className="w-full border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300"
+                  >
+                    Contratar plano
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-lg text-muted-foreground mb-6">Precisa de algo personalizado?</p>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+              >
+                Solicitar orçamento personalizado
+              </Button>
             </div>
           </div>
         </section>
@@ -425,10 +595,10 @@ export default function Portfolio() {
                 </p>
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   {[
-                    { number: "50+", label: "Projetos Concluídos" },
-                    { number: "100%", label: "Clientes Satisfeitos" },
-                    { number: "5+", label: "Anos de Experiência" },
-                    { number: "24h", label: "Suporte Rápido" },
+                    { number: "50+", label: "Projetos entregues" },
+                    { number: "180%", label: "Média de aumento em vendas" },
+                    { number: "5+", label: "Anos de experiência" },
+                    { number: "95%", label: "Clientes retornam" },
                   ].map((stat, index) => (
                     <div
                       key={index}
@@ -447,6 +617,73 @@ export default function Portfolio() {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-blue-950/10">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">Dúvidas frequentes</Badge>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Tire suas dúvidas sobre o desenvolvimento web</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Respostas para as perguntas mais comuns dos nossos clientes
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-6">
+              {[
+                {
+                  question: "Quanto tempo leva para entregar um website?",
+                  answer: "A maioria dos projetos leva entre 5 a 15 dias, dependendo da complexidade. Websites institucionais simples levam cerca de 5-7 dias, enquanto e-commerces completos levam 10-15 dias."
+                },
+                {
+                  question: "Você faz manutenção pós-entrega?",
+                  answer: "Sim! Oferecemos planos de manutenção mensal que incluem atualizações de segurança, backups e pequenas alterações no conteúdo. Todos os nossos planos Premium incluem 3 meses de suporte gratuito."
+                },
+                {
+                  question: "O site vai funcionar no celular?",
+                  answer: "Sim, todos os sites desenvolvidos por mim são responsivos, ou seja, se adaptam perfeitamente a qualquer dispositivo, seja computador, tablet ou celular."
+                },
+                {
+                  question: "Posso atualizar o conteúdo do site sozinho?",
+                  answer: "Sim, todos os sites são entregues com um painel de administração intuitivo que permite que você atualize textos, imagens e outros conteúdos facilmente, sem precisar de conhecimentos técnicos."
+                },
+                {
+                  question: "Como o site aparece nos resultados do Google?",
+                  answer: "Todos os sites são desenvolvidos com as melhores práticas de SEO (otimização para motores de busca), o que ajuda o seu site a aparecer mais facilmente nos resultados do Google. Posso também implementar estratégias avançadas de SEO como parte do projeto."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="border border-blue-500/20 rounded-lg overflow-hidden hover:bg-blue-950/30 transition-all duration-300"
+                >
+                  <details className="group p-4">
+                    <summary className="flex justify-between items-center font-semibold cursor-pointer list-none">
+                      <span>{faq.question}</span>
+                      <span className="ml-4 shrink-0">
+                        <svg
+                          className="w-5 h-5 text-blue-400 transition-transform duration-300 group-open:rotate-180"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </span>
+                    </summary>
+                    <div className="mt-4 text-muted-foreground">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </details>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -501,10 +738,17 @@ export default function Portfolio() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <Badge className="mb-4 bg-blue-500/10 text-blue-400 border-blue-500/20">Contato</Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Pronto para começar seu projeto?</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Pronto para aumentar suas vendas com um site profissional?</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Entre em contato comigo e vamos criar juntos o website perfeito para sua marca ou negócio.
               </p>
+
+              <div className="mt-8 p-4 bg-gradient-to-r from-blue-900/30 to-blue-800/30 rounded-lg border border-blue-500/30 max-w-2xl mx-auto">
+                <p className="text-lg text-blue-300 flex items-center justify-center gap-2">
+                  <Zap className="h-5 w-5" />
+                  <span><strong>Oferta por tempo limitado:</strong> 10% de desconto na sua primeira semana!</span>
+                </p>
+              </div>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -590,9 +834,47 @@ export default function Portfolio() {
         {/* Footer */}
         <footer className="py-12 bg-blue-950/20 border-t border-blue-500/20">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4 md:mb-0">
-                Cristovão Jr.
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4">
+                  Cristovão Jr.
+                </div>
+                <p className="text-muted-foreground">
+                  Websites profissionais que convertem visitantes em clientes e aumentam suas vendas.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-4 text-white">Confiável por</h4>
+                <div className="flex items-center gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">50+</div>
+                    <div className="text-xs text-muted-foreground">Clientes satisfeitos</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">95%</div>
+                    <div className="text-xs text-muted-foreground">Taxa de retenção</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">180%</div>
+                    <div className="text-xs text-muted-foreground">Aumento médio em vendas</div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-4 text-white">Contato</h4>
+                <div className="space-y-2">
+                  <p className="text-muted-foreground">Email: ti.juniorc@gmail.com</p>
+                  <p className="text-muted-foreground">WhatsApp: (63) 98108-9718</p>
+                  <p className="text-muted-foreground">Tocantins, Brasil</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-blue-500/20">
+              <div className="text-center md:text-left mb-4 md:mb-0">
+                <p>&copy; 2025 Cristovão Junior. Todos os direitos reservados.</p>
               </div>
               <div className="flex items-center space-x-6">
                 {[
@@ -610,9 +892,6 @@ export default function Portfolio() {
                   </Link>
                 ))}
               </div>
-            </div>
-            <div className="mt-8 pt-8 border-t border-blue-500/20 text-center text-muted-foreground">
-              <p>&copy; 2025 Cristovão Junior. Todos os direitos reservados.</p>
             </div>
           </div>
         </footer>
