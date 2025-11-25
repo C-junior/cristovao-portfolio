@@ -77,7 +77,7 @@ export default function Portfolio() {
     {
       title: "Quartzo engenharia",
       category: "Corporativo",
-      image: "/quartzo-preview.png?height=300&width=400",
+      image: "/quartzo-eng.png?height=300&width=400",
       description: "Landing page para aquisição de lead e contato.",
       tech: ["HTML5", "CSS3", "JavaScript"],
     },
@@ -94,6 +94,20 @@ export default function Portfolio() {
       image: "/agrotins.png?height=300&width=400",
       description: "Hotsite institucional com seções informativas, galeria e chamadas para ação.",
       tech: ["Vue.js", "Nuxt", "Tailwind"],
+    },
+    {
+      title: "Hydro Cultivo AI",
+      category: "Tecnologia Agrícola",
+      image: "/hydrocultivoai.png?height=300&width=400",
+      description: "Plataforma de monitoramento e automação para hidroponia com inteligência artificial.",
+      tech: ["React", "Node.js", "IoT"],
+    },
+    {
+      title: "Code News",
+      category: "Blog de Tecnologia",
+      image: "/codenews.png?height=300&width=400",
+      description: "Portal de notícias focado em desenvolvimento de software e novidades tech.",
+      tech: ["Next.js", "CMS", "Tailwind"],
     },
   ]
 
@@ -131,9 +145,8 @@ export default function Portfolio() {
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <Link
               href="/"
-              className={`text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent transition-all duration-300 hover:scale-105 ${
-                isVisible ? "animate-fade-in" : "opacity-0"
-              }`}
+              className={`text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent transition-all duration-300 hover:scale-105 ${isVisible ? "animate-fade-in" : "opacity-0"
+                }`}
             >
               Cristovão Jr.
             </Link>
@@ -144,9 +157,8 @@ export default function Portfolio() {
                 <Link
                   key={item}
                   href={`#${item.toLowerCase().replace("í", "i").replace("ó", "o")}`}
-                  className={`hover:text-blue-400 transition-all duration-300 hover:scale-105 relative group ${
-                    isVisible ? "animate-slide-down" : "opacity-0"
-                  }`}
+                  className={`hover:text-blue-400 transition-all duration-300 hover:scale-105 relative group ${isVisible ? "animate-slide-down" : "opacity-0"
+                    }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item}
@@ -242,9 +254,8 @@ export default function Portfolio() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className={`flex items-center gap-2 hover:text-blue-400 transition-all duration-300 ${
-                        isVisible ? "animate-fade-in" : "opacity-0"
-                      }`}
+                      className={`flex items-center gap-2 hover:text-blue-400 transition-all duration-300 ${isVisible ? "animate-fade-in" : "opacity-0"
+                        }`}
                       style={{ animationDelay: `${800 + index * 200}ms` }}
                     >
                       {item.icon}
@@ -498,8 +509,8 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-semibold mb-6">Vamos conversar</h3>
                 <div className="space-y-6">
                   {[
-                    { icon: <Mail className="h-6 w-6 text-blue-400" />, title: "Email", info: "cristovao@exemplo.com" },
-                    { icon: <Phone className="h-6 w-6 text-blue-400" />, title: "WhatsApp", info: "(63) 9810-9718" },
+                    { icon: <Mail className="h-6 w-6 text-blue-400" />, title: "Email", info: "ti.juniorc@gmail.com" },
+                    { icon: <Phone className="h-6 w-6 text-blue-400" />, title: "WhatsApp", info: "(63) 98108-9718" },
                     {
                       icon: <Instagram className="h-6 w-6 text-blue-400" />,
                       title: "Instagram",
