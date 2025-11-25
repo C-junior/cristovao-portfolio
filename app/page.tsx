@@ -269,13 +269,14 @@ export default function Portfolio() {
               <div className={`relative ${isVisible ? "animate-slide-left" : "opacity-0"}`}>
                 <div className="relative z-10 group">
                   <Image
-                    src="/logo.png?height=500&width=600"
+                    src="/logo.png"
                     alt="Cristovão Junior - Web Designer"
                     width={600}
                     height={500}
-                    className="rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-blue-500/25"
+                    className="rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-blue-500/25 relative z-10"
+                    style={{ filter: "drop-shadow(0 0 30px rgba(59, 130, 246, 0.3))" }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 z-20"></div>
                 </div>
                 <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-500/30 to-blue-700/30 rounded-2xl -z-10 animate-pulse-slow"></div>
               </div>
@@ -511,8 +512,18 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-semibold mb-6">Vamos conversar</h3>
                 <div className="space-y-6">
                   {[
-                    { icon: <Mail className="h-6 w-6 text-blue-400" />, title: "Email", info: "ti.juniorc@gmail.com" },
-                    { icon: <Phone className="h-6 w-6 text-blue-400" />, title: "WhatsApp", info: "(63) 98108-9718" },
+                    {
+                      icon: <Mail className="h-6 w-6 text-blue-400" />,
+                      title: "Email",
+                      info: "ti.juniorc@gmail.com",
+                      href: "mailto:ti.juniorc@gmail.com"
+                    },
+                    {
+                      icon: <Phone className="h-6 w-6 text-blue-400" />,
+                      title: "WhatsApp",
+                      info: "(63) 98108-9718",
+                      href: "https://wa.me/5563981089718"
+                    },
                     {
                       icon: <Instagram className="h-6 w-6 text-blue-400" />,
                       title: "Instagram",
