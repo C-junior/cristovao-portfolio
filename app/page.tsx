@@ -236,22 +236,16 @@ export default function Portfolio() {
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-                    asChild
                   >
-                    <Link href="#portfolio">
-                      Ver Meu Trabalho
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
+                    Ver Meu Trabalho
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300 hover:scale-105 bg-transparent"
-                    asChild
                   >
-                    <Link href="https://wa.me/5563981089718" target="_blank">
-                      Solicitar Orçamento
-                    </Link>
+                    Solicitar Orçamento
                   </Button>
                 </div>
                 <div className="flex flex-wrap items-center gap-6 mt-8 text-sm text-muted-foreground">
@@ -611,16 +605,6 @@ export default function Portfolio() {
             </div>
           </div>
         </footer>
-
-        {/* Floating WhatsApp Button */}
-        <Link
-          href="https://wa.me/5563981089718"
-          target="_blank"
-          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-110 animate-bounce-slow"
-          aria-label="Contato via WhatsApp"
-        >
-          <MessageCircle className="h-8 w-8" />
-        </Link>
       </div>
     </div>
   )
